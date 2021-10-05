@@ -1,0 +1,97 @@
+{
+	"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
+	"SettingsVersion": 1.2,
+	"SimMode": "Multirotor",
+	"ClockSpeed": 1,
+	"ViewMode": "",
+	"Recording": {
+		"RecordOnMove": false,
+		"RecordInterval": 1,
+		"Cameras": [
+			{
+				"CameraName": "down_center_custom",
+				"ImageType": 0,
+				"PixelsAsFloat": false,
+				"Compress": true
+			},
+			{
+				"CameraName": "down_center_custom",
+				"ImageType": 5,
+				"PixelsAsFloat": false,
+				"Compress": true
+			}
+		]
+	},
+	"Vehicles": {
+		"SimpleFlight": {
+			"VehicleType": "SimpleFlight",
+			"DefaultVehicleState": "Armed",
+			"AutoCreate": true,
+			"PawnPath": "",
+			"EnableCollisionPassthrogh": false,
+			"EnableCollisions": true,
+			"AllowAPIAlways": true,
+			"RC": {
+				"RemoteControlID": 0,
+				"AllowAPIWhenDisconnected": false
+			},
+			"Cameras": {
+				"down_center_custom": {
+					"CaptureSettings": [
+						{
+							"PublishToRos": 0,
+							"ImageType": 0,
+							"Width": 1280,
+							"Height": 720,
+							"FOV_Degrees": 180,
+							"AutoExposureSpeed": 100,
+							"AutoExposureBias": 0,
+							"AutoExposureMaxBrightness": 1,
+							"AutoExposureMinBrightness": 1,
+							"MotionBlurAmount": 0,
+							"TargetGamma": 1.5
+						},
+						{
+							"ImageType": 5,
+							"Width": 1280,
+							"Height": 720,
+							"FOV_Degrees": 180,
+							"AutoExposureSpeed": 100,
+							"AutoExposureBias": 0,
+							"AutoExposureMaxBrightness": 1,
+							"AutoExposureMinBrightness": 1,
+							"MotionBlurAmount": 0,
+							"TargetGamma": 1.5
+						}
+					],
+					"Gimbal": {
+						"Stabilization": 1,
+						"Pitch": 270.0,
+						"Roll": 0.0,
+						"Yaw": 0.0
+					},
+					"X": 0.0,
+					"Y": 0.0,
+					"Z": 0.2,
+					"Pitch": 270.0,
+					"Roll": 0.0,
+					"Yaw": 0.0
+				}
+			}
+		}
+	},
+	"SubWindows": [
+		{
+			"WindowID": 1,
+			"ImageType": 5,
+			"CameraName": "down_center_custom",
+			"Visible": false
+		},
+		{
+			"WindowID": 2,
+			"ImageType": 0,
+			"CameraName": "down_center_custom",
+			"Visible": false
+		}
+	]
+}

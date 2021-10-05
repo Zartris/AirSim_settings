@@ -1,0 +1,65 @@
+{
+	"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
+	"SettingsVersion": 1.2,
+	"SimMode": "ComputerVision",
+	"Recording": {
+		"RecordOnMove": false,
+		"RecordInterval": 0.1,
+		"Cameras": [
+			{
+				"CameraName": "0",
+				"ImageType": 0,
+				"PixelsAsFloat": false,
+				"Compress": true
+			},
+			{
+				"CameraName": "0",
+				"ImageType": 5,
+				"PixelsAsFloat": false,
+				"Compress": true
+			}
+		]
+	},
+	"CameraDefaults": {
+		"CaptureSettings": [
+			{
+					"ImageType": 0,
+					"Width": 1280,
+					"Height": 720,
+					"FOV_Degrees": 90,
+					"AutoExposureSpeed": 100,
+					"AutoExposureBias": 0,
+					"AutoExposureMaxBrightness": 1,
+					"AutoExposureMinBrightness": 1,
+					"MotionBlurAmount": 0,
+					"TargetGamma": 1.5
+			},
+			{
+					"ImageType": 5,
+					"Width": 1280,
+					"Height": 720,
+					"FOV_Degrees": 90,
+					"AutoExposureSpeed": 100,
+					"AutoExposureBias": 0,
+					"AutoExposureMaxBrightness": 1,
+					"AutoExposureMinBrightness": 1,
+					"MotionBlurAmount": 0,
+					"TargetGamma": 1.5
+			}
+		]
+	},
+	"SubWindows": [
+		{
+			"WindowID": 1,
+			"ImageType": 5,
+			"CameraName": "0",
+			"Visible": false
+		},
+		{
+			"WindowID": 2,
+			"ImageType": 0,
+			"CameraName": "0",
+			"Visible": false
+		}
+	]
+}
