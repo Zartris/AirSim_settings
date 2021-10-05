@@ -1,0 +1,93 @@
+{
+    "SettingsVersion": 1.2,
+    "SimMode": "Multirotor",
+    "ClockType": "SteppableClock",
+    "ViewMode": "",
+    "Recording": {
+      "RecordOnMove": false,
+      "RecordInterval": 1,
+      "Cameras": [
+        {
+          "CameraName": "inspection_camera",
+          "ImageType": 0,
+          "PixelsAsFloat": false,
+          "Compress": true
+        },
+        {
+          "CameraName": "inspection_camera",
+          "ImageType": 3,
+          "PixelsAsFloat": true,
+          "Compress": false,
+          "Read_this":"https://github.com/microsoft/AirSim/issues/1785#issuecomment-463037515"
+        }
+      ]
+    },
+    "Vehicles": {
+        "PX4": {
+            "VehicleType": "PX4Multirotor",
+            "UseSerial": false,
+            "LockStep": true,
+            "UseTcp": true,
+            "TcpPort": 4560,
+            "ControlPortLocal": 14541,
+            "ControlPortRemote": 14581,
+			"Logs": "/home/jonas/Documents/AirSim/mavlink_logs/",
+            "Sensors":{
+                "Barometer":{
+                    "SensorType": 1,
+                    "Enabled": true,
+                    "PressureFactorSigma": 0.0001825
+                }
+            },
+            "Parameters": {
+                "NAV_RCL_ACT": 0,
+                "NAV_DLL_ACT": 0,
+                "COM_OBL_ACT": 1,
+                "LPE_LAT": 47.641468,
+                "LPE_LON": -122.140165
+            },
+            "Cameras": {
+                "inspection_camera": {
+                  "CaptureSettings": [
+                    {
+                      "PublishToRos": 1,
+                      "ImageType": 0,
+                      "Width": 1280,
+                      "Height": 720,
+                      "FOV_Degrees": 90,
+                      "AutoExposureSpeed": 100,
+                      "AutoExposureBias": 0,
+                      "AutoExposureMaxBrightness": 1,
+                      "AutoExposureMinBrightness": 1,
+                      "MotionBlurAmount": 0,
+                      "TargetGamma": 1.5
+                    },
+                    {
+                      "PublishToRos": 1,
+                      "ImageType": 3,
+                      "Width": 1280,
+                      "Height": 720,
+                      "FOV_Degrees": 90,
+                      "AutoExposureSpeed": 100,
+                      "AutoExposureBias": 0,
+                      "AutoExposureMaxBrightness": 1,
+                      "AutoExposureMinBrightness": 1,
+                      "MotionBlurAmount": 0
+                    }
+                  ],
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.35,
+                  "Pitch": 0.0,
+                  "Roll": 0.0,
+                  "Yaw": 0.0
+                }
+              }
+        }
+    },
+    "SubWindows": [
+      {"WindowID": 0, "ImageType": 3, "CameraName": "inspection_camera", "Visible": true},
+      {"WindowID": 1, "ImageType": 5, "CameraName": "inspection_camera", "Visible": false},
+      {"WindowID": 2, "ImageType": 0, "CameraName": "inspection_camera", "Visible": true}
+  ]
+}
