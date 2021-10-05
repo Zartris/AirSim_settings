@@ -30,8 +30,7 @@
             "UseTcp": true,
             "TcpPort": 4560,
             "ControlPortLocal": 14541,
-            "ControlPortRemote": 14581,
-			"Logs": "/home/jonas/Documents/AirSim/mavlink_logs/",
+            "ControlPortRemote": 14581
             "Sensors":{
                 "Barometer":{
                     "SensorType": 1,
